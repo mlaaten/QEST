@@ -1,0 +1,59 @@
+### Configuration file for qopen package in JSON format
+# Comments are indicated with "#" and ignored while parsing
+
+{
+
+"logfile": "log.log",
+"loglevel": 3,
+"log": null,
+
+
+"inv": "../input/inv.xml",
+"events_": "../input/evt/evt.xml",
+"stream": "../input/wav/*.mseed",
+"startvals": "../input/01_results_qopen.json",
+
+"hybridpara": true,
+
+"freqs": {"cfreqs": [4.2], "width": 1},
+
+"filter_": {"corners": 2, "zerophase": true},
+"noise_windows": [["OT-10s","OT-4s"],["OT-4s","OT+0s"]],
+"coda_window": ["S-1s", ["S+40s", "2SNR"]],
+"skip": {"coda_window": 4, "distance": 150},
+
+"smooth": 2,
+"smooth_window": "bartlett",
+"cut_coda": {"smooth": 2, "ratio": 2.0, "bulk_win_len": 2},
+"use_picks": true,
+"vs": 2400,
+"request_window": [-15, 65],
+"rho": 2740,
+"fs": 2,
+
+"rec_radius":  1.0,
+"dt": 0.2,
+"window_len": 2,
+
+"particles": 5000000,
+
+"damping" : 0.3,
+
+
+"v_vel": [0.655,1.210,2.184,2.789,3.848,4.6],
+"v_depth": [0.0,1.15,1.90,2.80,3.80,27.0],
+"rho_depth": [2.009, 2.196, 2.430, 2.517, 2.660, 2.931],
+
+"att_depth": [0,1.15,1.9,2.8,3.80],
+
+"kappa_depth": [0.3,0.3,0.3,0.3,0.3],
+
+"lstar_bounds": [5, 5000],
+"b_bounds": [-2.5, 0.5]
+
+
+}
+
+
+
+
